@@ -21,5 +21,9 @@ namespace StopWatch
         {
 
         }
+
+        private void NumberClick(object sender, EventArgs e)
+        {
+        }
     }
 }
