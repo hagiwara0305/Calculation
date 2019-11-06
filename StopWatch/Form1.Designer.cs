@@ -47,13 +47,14 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
+            this.CalculationHistoryLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Anserlabel
             // 
             this.Anserlabel.AutoSize = true;
             this.Anserlabel.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Anserlabel.Location = new System.Drawing.Point(12, 50);
+            this.Anserlabel.Location = new System.Drawing.Point(12, 67);
             this.Anserlabel.Name = "Anserlabel";
             this.Anserlabel.Size = new System.Drawing.Size(37, 40);
             this.Anserlabel.TabIndex = 0;
@@ -67,6 +68,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "CE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.ClearentryClick);
             // 
             // button2
             // 
@@ -76,6 +78,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "C";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.ClearClick);
             // 
             // button3
             // 
@@ -85,6 +88,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "<-";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.BackspaceClick);
             // 
             // button4
             // 
@@ -94,6 +98,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "÷";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.CalculationSymbolClick);
             // 
             // button5
             // 
@@ -103,6 +108,7 @@
             this.button5.TabIndex = 8;
             this.button5.Text = "×";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.CalculationSymbolClick);
             // 
             // button6
             // 
@@ -142,6 +148,7 @@
             this.button9.TabIndex = 12;
             this.button9.Text = "-";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.CalculationSymbolClick);
             // 
             // button10
             // 
@@ -181,6 +188,7 @@
             this.button13.TabIndex = 16;
             this.button13.Text = "+";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.CalculationSymbolClick);
             // 
             // button14
             // 
@@ -220,6 +228,7 @@
             this.button17.TabIndex = 20;
             this.button17.Text = "=";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.EqualClick);
             // 
             // button19
             // 
@@ -231,11 +240,20 @@
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.NumberClick);
             // 
+            // CalculationHistoryLabel
+            // 
+            this.CalculationHistoryLabel.AutoSize = true;
+            this.CalculationHistoryLabel.Location = new System.Drawing.Point(9, 9);
+            this.CalculationHistoryLabel.Name = "CalculationHistoryLabel";
+            this.CalculationHistoryLabel.Size = new System.Drawing.Size(0, 18);
+            this.CalculationHistoryLabel.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 564);
+            this.Controls.Add(this.CalculationHistoryLabel);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button13);
@@ -284,6 +302,7 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Label CalculationHistoryLabel;
     }
 }
 
