@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{101AF3A7-E0D0-4AEE-8E88-ED704AC1AB18}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>StopWatch</RootNamespace>
-    <AssemblyName>StopWatch</AssemblyName>
+    <RootNamespace>Calculation</RootNamespace>
+    <AssemblyName>Calculation</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

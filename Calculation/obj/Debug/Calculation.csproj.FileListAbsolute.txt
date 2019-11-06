@@ -1,0 +1,10 @@
+C:\Users\shion\Desktop\calculation_tutorial\Calculation\bin\Debug\Calculation.exe.config
+C:\Users\shion\Desktop\calculation_tutorial\Calculation\bin\Debug\Calculation.exe
+C:\Users\shion\Desktop\calculation_tutorial\Calculation\bin\Debug\Calculation.pdb
+C:\Users\shion\Desktop\calculation_tutorial\Calculation\obj\Debug\Calculation.csprojAssemblyReference.cache
+C:\Users\shion\Desktop\calculation_tutorial\Calculation\obj\Debug\Calculation.Form1.resources
+C:\Users\shion\Desktop\calculation_tutorial\Calculation\obj\Debug\Calculation.Properties.Resources.resources
+C:\Users\shion\Desktop\calculation_tutorial\Calculation\obj\Debug\Calculation.csproj.GenerateResource.cache
+C:\Users\shion\Desktop\calculation_tutorial\Calculation\obj\Debug\Calculation.csproj.CoreCompileInputs.cache
+C:\Users\shion\Desktop\calculation_tutorial\Calculation\obj\Debug\Calculation.exe
+C:\Users\shion\Desktop\calculation_tutorial\Calculation\obj\Debug\Calculation.pdb

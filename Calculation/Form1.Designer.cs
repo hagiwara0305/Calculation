@@ -1,4 +1,4 @@
-﻿namespace StopWatch
+﻿namespace Calculation
 {
     partial class Form1
     {
