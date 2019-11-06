@@ -62,6 +62,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(12, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 75);
@@ -82,6 +83,7 @@
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(174, 150);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 75);
@@ -92,6 +94,7 @@
             // 
             // button4
             // 
+            this.button4.Enabled = false;
             this.button4.Location = new System.Drawing.Point(255, 150);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 75);
@@ -102,6 +105,7 @@
             // 
             // button5
             // 
+            this.button5.Enabled = false;
             this.button5.Location = new System.Drawing.Point(255, 231);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 75);
@@ -142,6 +146,7 @@
             // 
             // button9
             // 
+            this.button9.Enabled = false;
             this.button9.Location = new System.Drawing.Point(255, 312);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 75);
@@ -182,6 +187,7 @@
             // 
             // button13
             // 
+            this.button13.Enabled = false;
             this.button13.Location = new System.Drawing.Point(255, 393);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(75, 75);
@@ -275,7 +281,6 @@
             this.Controls.Add(this.Anserlabel);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

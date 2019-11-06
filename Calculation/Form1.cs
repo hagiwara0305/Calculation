@@ -16,15 +16,12 @@ namespace Calculation
         private string calculationSymbol;
         private bool fastCalculationFlag = true;
         private bool CalculationSymbolFlag = false;
+        private Button[] calculationObject;
 
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            calculationObject = new Button[] { button4, button5, button9, button13 , button1, button3 };
         }
 
         private void NumberClick(object sender, EventArgs e)
@@ -37,6 +34,7 @@ namespace Calculation
             {
                 Anserlabel.Text = ((Button)sender).Text;
                 CalculationSymbolFlag = true;
+                SetCalculationEnable(true);
             }
         }
 
@@ -51,37 +49,34 @@ namespace Calculation
             }
             else
             {
+                if(anser == 0 && calculationSymbol == "÷")
+                {
+                    Anserlabel.Text = "∞";
+                    setCliear();
+                    return;
+                }
                 anser = CalculationEqual(int.Parse(Anserlabel.Text), anser);
                 calculationSymbol = ((Button)sender).Text;
                 CalculationHistoryLabel.Text += Anserlabel.Text + " " + calculationSymbol;
             }
             Anserlabel.Text = anser.ToString();
             CalculationSymbolFlag = false;
+            SetCalculationEnable(false);
         }
 
         private void EqualClick(object sender, EventArgs e)
         {
             CalculationHistoryLabel.Text = "";
+            if (int.Parse(Anserlabel.Text) == 0 && calculationSymbol == "÷")
+            {
+                Anserlabel.Text = "∞";
+                setCliear();
+                return;
+            }
             anser = CalculationEqual(anser, int.Parse(Anserlabel.Text));
             Anserlabel.Text = anser.ToString();
             CalculationSymbolFlag = false;
             fastCalculationFlag = true;
-        }
-
-        private int CalculationEqual(int anser, int number)
-        {
-            switch (calculationSymbol)
-            {
-                case "+":
-                    return anser + number;
-                case "-":
-                    return anser - number;
-                case "÷":
-                    return anser / number;
-                case "×":
-                    return anser * number;
-            }
-            return 0;
         }
 
         private void BackspaceClick(object sender, EventArgs e)
@@ -103,12 +98,42 @@ namespace Calculation
 
         private void ClearClick(object sender, EventArgs e)
         {
-            anser = 0;
+            setCliear();
             Anserlabel.Text = "0";
+        }
+
+        private void setCliear()
+        {
+            anser = 0;
             CalculationHistoryLabel.Text = "";
             calculationSymbol = null;
             fastCalculationFlag = true;
             CalculationSymbolFlag = false;
+            SetCalculationEnable(false);
+        }
+
+        private int CalculationEqual(int anser, int number)
+        {
+            switch (calculationSymbol)
+            {
+                case "+":
+                    return number + anser;
+                case "-":
+                    return number - anser;
+                case "÷":
+                    return anser / number;
+                case "×":
+                    return number * anser;
+            }
+            return 0;
+        }
+
+        private void SetCalculationEnable(bool enabel)
+        {
+            foreach(Button item in calculationObject)
+            {
+                item.Enabled = enabel;
+            }   
         }
     }
 }
